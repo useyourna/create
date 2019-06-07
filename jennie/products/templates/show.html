@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1> 상품 상세보기 페이지 입니다.</h1>
+  
+  <h2>상품이름 : {{ product.title }}</h2>
+  <h3>상품가격: {{ product.price }}</h3>
+  <p>상품 설명 : {{ product.description }}</p>
+  
+  <a href="{% url 'products:edit' product.pk %}  " class="btn btn-primary">수정</a>
+  <a href="#" class="btn btn-primary" date-toggle="modal" date-target="#exampleModal">삭제</a>
+ 
+
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+      </div>
+   </div>
+ </div>
+
+
+{% endblock %}

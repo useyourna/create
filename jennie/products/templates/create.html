@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<center><img src="{% static 'image/g.PNG' %}"></img></center>
+
+
+<br><br><br><center><img src="{% static 'image/gg.PNG' %}" alt="" class="n"></img></center><br><br>
+
+<center><img src="{% static 'image/g.PNG' %}"></img></center>
+
+
+
+
+<form action="{% url 'products:create' %}" method="POST">
+    {% csrf_token %}
+    <center><label><img src="{% static 'image/a.PNG' %}"></img></label></center>
+   <center> <input type="text" name="title"></center><br><br>
+    
+    <center><label for="price"><img src="{% static 'image/b.PNG' %}"></img></label></center>
+    <center><input type="number" name="price"></center><br><br>
+    <center><label><img src="{% static 'image/c.PNG' %}"></label></center>
+    <center><textarea name="description"></textarea></center><br><br>
+    
+    <center><input type="submit" class="btn btn-primary" value="등록"></center>
+    
+</form>
+{% endblock %}

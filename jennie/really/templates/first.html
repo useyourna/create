@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<center><img src="{% static 'image/je.gif' %}" alt="" class="n"></img></center><br><br>
+
+<center><a href="{% url 'products:create' %}"><img src="{% static 'image/click.GIF' %}"></a></center>
+
+{% endblock %}

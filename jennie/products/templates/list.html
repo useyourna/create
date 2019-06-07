@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+  
+  <center><img src="{% static 'image/o.PNG' %}"></img></center>
+
+<center><img src="{% static 'image/q.gif' %}"></img></center>
+
+  <center><img src="{% static 'image/o.PNG' %}"></img></center>
+  <center><img src="{% static 'image/r.PNG' %}"></img></center>
+
+   
+ 
+ {% for item in all_products %} 
+ <center><div class="card col-4" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ item.title }}</h5>
+    <p class="card-text">{{ item.description }}</p>
+    <a href="{% url 'products:show' item.id %}" class="btn btn-primary">Go</a>
+    
+  </div>
+</div></center>
+{% endfor %}
+{% endblock %}
